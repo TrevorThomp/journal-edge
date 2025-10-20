@@ -1,0 +1,39 @@
+{
+  "name": "@journal-edge/data-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Consolidated data management microservice (trades, tags, calendar)",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint . --ext .ts",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@journal-edge/types": "workspace:*",
+    "@journal-edge/utils": "workspace:*",
+    "@journal-edge/db": "workspace:*",
+    "@journal-edge/fastify-framework": "workspace:*",
+    "fastify": "^4.28.1",
+    "@fastify/multipart": "^8.3.0",
+    "@supabase/supabase-js": "^2.45.4",
+    "zod": "^3.23.8",
+    "csv-parse": "^5.5.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.11",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}
